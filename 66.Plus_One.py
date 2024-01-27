@@ -39,7 +39,14 @@ digits does not contain any leading 0's.
 """
 class Solution:
     def plusOne(self, digits: list[int]) -> list[int]:
-     
+        a = ""
+        for i in digits:
+            a += str(i)
+        b = int(a) + 1
+        c = []
+        for j in str(b):
+            c.append(int(j))
+        return c
 
 
 
@@ -50,5 +57,5 @@ class Solution:
 
 if __name__ == "__main__":
     obj = Solution()
-    show = obj.plusone([1,2,3])
+    show = obj.plusOne([9])
     print(show)

@@ -31,11 +31,7 @@ nums2.length == n
 """
 class Solution:
     def findMedianSortedArrays(self, nums1: list[int], nums2: list[int]):
-        new = nums1 + nums2
-        new.sort()
-        start = 0
-        end = len(new)
-        return new #float(new[int(start + (end-start)/2)])
+        return median(sorted(nums1 + nums2))
 if __name__ == "__main__":
     obj = Solution()
     show = obj.findMedianSortedArrays([1,2],[3,4])
